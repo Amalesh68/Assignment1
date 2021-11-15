@@ -69,13 +69,20 @@ margin-right: 5px;
 }
 
 .login_btn{
-color: black;
-background-color: #FFC312;
+ 
+/*  .login_btn*/
+color: rgb(95, 52, 52);
+background-color: white;
+
 width: 100px;
 }
+#log{
+  color: rgb(17, 15, 15);
+background-color: #e9f543;
+}
 
-.login_btn:hover{
-color: black;
+#log:hover{
+color: rgb(95, 52, 52);
 background-color: white;
 }
 
