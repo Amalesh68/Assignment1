@@ -3,7 +3,8 @@
 <head>
 	<title>Sign up Page</title>
   
-   
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
 	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -77,112 +78,104 @@
         <a class="btn btn-primary" href="./login.html" role="button">Login</a> 
     </form> -->
   </nav>
- <!-- header ends -->
- 
-	<!-- sign up page -->
 
-    <div class="container">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    
-     <b id="login-name">SIGN-UP</b> 
+
+
+
+  <div class="d-flex justify-align-start">
+    <div class="   bbox1" id="login">
+      <form action="login.html" onsubmit=" return svalidate()">
+        <div class="mb-5">
+          <div>
+            <label for="sName" class="form-label" >Name</label>
+            <input type="text" class="form-control"  id="sName" placeholder="Enter your name">
+            <small id="e0"></small>
+          </div>
+          <br>
         
-        <div class="row">
-            
-    <div class="col-md-6 col-md-offset-3" id="login">  
-    
-    <form action="login.html" onsubmit=" return svalidate()">
-        
-    <div class="form-group">
-    <label class="user" > UserName:  </label>
-    
-        
-    <input type="text" class="form-control" id="text1 name1 Name" name="tl" placeholder="Username">
-    <label for="error5" id="error5"></label>
-
-    </div>
-    
-    
-    <div class="form-group">
-    <label class="user"> Email ID: </label>
-    
-    <input type="email" class="form-control" id="text2 email Email" name="tl" placeholder=" Enter Email Address">
-    <label for="error1" id="error1"></label>
-    
-    </div>
-    <div class="form-group">
-    <label class="user"> Mobile No: </label>
-    
-    <input type="text" class="form-control" id="text2 mobno Phone" name="tl" placeholder=" Enter your mobile Number">
-    <label for="error2" id="error2"></label>
-    
-    </div>
-    
-    <div class="form-group">
-    <label class="user"> Password: </label>
-    <input type="password" class="form-control" id="text2 pass1 password" name="tl" placeholder=" Enter Password">
-    <label for="error3" id="error3"></label>
-
-    </div>
-    
-    <div class="form-group">
-    <label class="user">Confirm Password: </label>
-    <input type="password" class="form-control" id="text2 pass2 password sPassword1Re" name="tl" placeholder=" Enter Confirm passowrd"  id="myInput">
-    <label for="error4" id="error4"></label>
-
-    <!-- <input type="checkbox" onclick="myFunction()">Show Password -->
-    </div>
+        <div>
+          <label for="sEmail"  class="form-label" >Email address</label>
+          <input type="email" class="form-control" id="sEmail" aria-describedby="emailHelp" placeholder="Enter email address">
+          <small id="e1"></small>
+        </div>
+        <br>
+       
+        <div>
+          <label for="sPhone" class="form-label">Contact No</label>
+          <input type="text"   class="form-control" placeholder="Enter 10 digit mobile number" id="sPhone" >
+          <small id="e2"></small>
+        </div>
+        <!-- <div class="passwordHelpBlock" class="form-text" style="font-size:smaller;  font-style: italic; color:cornflowerblue">
+          xxxxxxxxxx , xxx xxx xxxx , xxx-xxx-xxxx , xxx.xxx.xxxx formats only allowed
+        </div>
+        <br> --> <br>
+        <div>
+          <!-- <label for="sPassword1" class="form-label">Enter a Password</label>
+          <input type="password"class="form-control" id="spassword1"  >
+          
+          <small id="e3"></small> -->
+          
+          <!-- <p id="e3"></p> -->
   
-    <!-- <script>function myFunction() {
-      var x = document.getElementById("myInput");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }</script> -->
-    
-    <div class="form-group label_001" >
-    <label class=""> Gender: </label>
-    <label class="radio-inline"><input type="radio" name="optradio">Male</label>
-    <label class="radio-inline"><input type="radio" name="optradio">Female</label>
-    <label class="radio-inline"><input type="radio" name="optradio">Other</label>
-    </div>
-    
-    
-    <div class="form-group">
-    
-    <input type="submit" class="btn btn-success" value="submit" style="border-radius:0px;" >
-    <input type="reset" class="btn btn-danger" value="Reset" style="border-radius:0px;">
-    
+         
+  
         </div>
-        <br/><br/><br/>
-        <a href="#" style="color: white; font-size: 15px; float: right; margin-right: 10px;"> Forget Password </a>
-        <!-- <a href="#" style="color: white; font-size: 15px; float: right; margin-right: 10px;"> Register </a> -->
-    </form>
-      </div>
+  
+        <div  >
+          <label for="password" class="form-label">Create Password</label>
+          <input onkeyup="checkPassword()" type="password" placeholder="Type password" class="form-control"
+              id="password">
+              
+          <div class="icons">
+              <div class="weak alert alert-danger" role="alert">Weak Password</div>
+              <div class="medium alert alert-warning" role="alert">Medium Password</div>
+              <div class="strong alert alert-success" role="alert">Strong Password</div>
+          </div>
+          <small id="e3"></small>
+          <!-- <a href="#" class="submit-btn btn btn-primary my-5">Submit</a> -->
+          <!-- <div class="passwordHelpBlock" class="form-text" style="font-size:smaller;  font-style: italic; color:cornflowerblue">
+            Minimum 8 characters required. Include atleast one lowercase and one uppercase alphabet, digit and special character.
+          </div> -->
+  </div>
+        
+     <br>
+       
+        <div>
+          <label for="sPassword1Re" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Re-type password" id="sPassword1Re">
+          <small id="e4"></small>
         </div>
-    </div> 
-        <!--signup page ends  -->
-
-
-        <!-- footer -->
+        </div>
+       
+      
+      
+       <!-- <input type="submit" class="submit-btn btn btn-outline-light me-2" id="submit" > -->
+     
+        <!-- <a class="submit-btn btn btn-outline-light me-2" href="#"   role="button" type="submit"  id="submit">Sign Up</a> -->
+        <button class="submit-btn btn btn-outline-light me-2" type="submit">Sign Up</button>
+        <br>
+        <br>
+        <br>
+      </form> 
+        <script src="form.js"></script>
+      
+  
+  </div>
+  </div>
+         <!-- footer -->
 <div class="footer-basic">
-  <footer>
-      <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-      <ul class="list-inline">
-          <li class="list-inline-item"><a href="index.html">Home</a></li>
-          <li class="list-inline-item"><a href="#">Services</a></li>
-          <li class="list-inline-item"><a href="#">About</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-      </ul>
-      <p class="copyright">Kerala Tourism © 2021</p>
-  </footer>
-</div>
-<!-- footer ends -->
-<script src="form.js"></script>
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Kerala Tourism © 2021</p>
+    </footer>
+  </div>
+  <!-- footer ends -->
 </body>
 </html>
